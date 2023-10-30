@@ -1,0 +1,108 @@
+.card-body{
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.15);
+    padding: 1rem;
+    background-color: #fefffe;
+    margin: 1rem;
+}
+
+.card-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title-text{
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.user-container{
+    position: relative;
+}
+
+.image-container{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-image{
+    width: 35px;
+}
+
+.user-status-outer{
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    padding: 1px;
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-status-inner{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+}
+
+.card-heading{
+    font-size: 16px;
+    color: #1f2937;
+    font-weight: 500;
+    margin: 2px 0;
+}
+
+.card-icons{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+
+.icon-outer-container{
+    padding: 5px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+}
+
+.icon-inner-container{
+    background-color: #6a6f77;
+    display: grid;
+    place-items: center;
+    padding: 3px;
+    font-size: 10px;
+    color: white;
+    border-radius: 2px;
+}
+
+.card-icons__tag-container{
+    padding: 5px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.card-icons__tag-container__icon{
+    display: grid;
+    place-items: center;
+    color:#d1d5db;
+}
+
+.card-icons__tag-container__text{
+    color: #6b7280;
+}
