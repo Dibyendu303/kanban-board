@@ -3,7 +3,7 @@ import "./PreferencesModal.css"
 import { useDispatch } from 'react-redux';
 import { groupTickets, setPreference } from '../features/ticketSlice';
 
-const PreferencesModal = () => {
+const PreferencesModal = ({ setIsModalOpen }) => {
     const [option, setOption] = useState({
         groupBy: "status",
         orderBy: "priority"
@@ -19,12 +19,14 @@ const PreferencesModal = () => {
         setOption(newPreference);
         dispatch(setPreference(newPreference));
         dispatch(groupTickets());
+        setIsModalOpen(false);
     }
 
     useEffect(() => {
         const savedPreference = JSON.parse(localStorage.getItem("kanbanBoard"));
-        console.log("SAVEDE: ", savedPreference);
-        setOption(savedPreference);
+        if (savedPreference) {
+            setOption(savedPreference);
+        }
     }, []);
 
     return (

@@ -20,7 +20,7 @@ const Navbar = () => {
                     {isModalOpen ? <FaAngleUp /> : <FaAngleDown />}
                 </div>
             </div>
-            {isModalOpen && <PreferencesModal />}
+            {isModalOpen && <PreferencesModal setIsModalOpen={setIsModalOpen} />}
         </div>
     )
 }

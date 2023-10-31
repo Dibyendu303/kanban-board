@@ -7,10 +7,8 @@ import "./CardContainer.css"
 const CardContainer = () => {
 
     const tickets = useSelector(selectAllTickets);
-    console.log(tickets);
     const dispatch = useDispatch();
     const grouped = useSelector(selectGroupedTickets);
-    console.log(grouped);
 
     useEffect(() => {
         dispatch(groupTickets());

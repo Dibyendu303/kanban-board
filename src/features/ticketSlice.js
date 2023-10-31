@@ -66,6 +66,21 @@ export const ticketSlice = createSlice({
                 })
                 state.selectedTickets = selectedData;
             }
+
+            if (state.preference.orderBy === "priority") {
+                state.selectedTickets.forEach(elem => {
+                    elem.value.sort((a, b) => {
+                        return b.priority - a.priority
+                    });
+                })
+            }
+            else {
+                state.selectedTickets.forEach(elem => {
+                    elem.value.sort((a, b) => {
+                        return a.title.localeCompare(b.title)
+                    });
+                })
+            }
         }
     },
 })

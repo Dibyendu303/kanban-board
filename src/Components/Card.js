@@ -8,7 +8,7 @@ const Card = (props) => {
     return (
         <div className='card-body'>
             <div className='card-title'>
-                <div className='card-title-text'>{id}</div>
+                <div className='card-title-text'>{id} - {priority}</div>
                 <div className='user-container'>
                     <div className='image-container'>
                         <img src="/assets/images/user1.jpg" className='user-image' alt='user-icon' />
