@@ -1,6 +1,6 @@
-.card-body{
+.card-body {
     border-radius: 7px;
-    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
     padding: 0.5rem 1rem;
     background-color: #fefffe;
     height: 7rem;
@@ -9,22 +9,22 @@
     justify-content: space-around;
 }
 
-.card-title{
+.card-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.card-title-text{
+.card-title-text {
     font-size: 14px;
     color: #6b7280;
 }
 
-.user-container{
+.user-container {
     position: relative;
 }
 
-.image-container{
+.image-container {
     border-radius: 50%;
     height: 30px;
     width: 30px;
@@ -34,11 +34,11 @@
     justify-content: center;
 }
 
-.user-image{
+.user-image {
     width: 35px;
 }
 
-.user-status-outer{
+.user-status-outer {
     width: 9px;
     height: 9px;
     position: absolute;
@@ -52,32 +52,32 @@
     align-items: center;
 }
 
-.user-status-inner{
+.user-status-inner {
     width: 9px;
     height: 9px;
     border-radius: 50%;
     background-color: #d1d5db;
 }
 
-.card-heading{
+.card-heading {
     font-size: 16px;
     color: #1f2937;
     font-weight: 500;
 }
 
-.card-icons{
+.card-icons {
     display: flex;
     align-items: center;
-    gap:8px;
+    gap: 8px;
 }
 
-.icon-outer-container{
-    padding: 5px;
+.icon-outer-container {
+    padding: 3px 5px;
     border: 1px solid #e5e7eb;
     border-radius: 4px;
 }
 
-.icon-inner-container{
+.icon-inner-container {
     background-color: #6a6f77;
     display: grid;
     place-items: center;
@@ -87,7 +87,7 @@
     border-radius: 2px;
 }
 
-.card-icons__tag-container{
+.card-icons__tag-container {
     padding: 5px;
     border: 1px solid #e5e7eb;
     border-radius: 4px;
@@ -98,12 +98,12 @@
     gap: 4px;
 }
 
-.card-icons__tag-container__icon{
+.card-icons__tag-container__icon {
     display: grid;
     place-items: center;
-    color:#d1d5db;
+    color: #d1d5db;
 }
 
-.card-icons__tag-container__text{
+.card-icons__tag-container__text {
     color: #6b7280;
 }

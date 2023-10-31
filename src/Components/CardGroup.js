@@ -1,16 +1,29 @@
 import React from 'react'
 import { FaPlus } from 'react-icons/fa6';
-import { MdCancel } from 'react-icons/md';
 import { BsThreeDots } from 'react-icons/bs';
 import Card from './Card';
+import CardGroupHeadingIcon from './CardGroupHeadingIcon';
 
 const CardGroup = (props) => {
-    const { title, value } = props.group;
+    const { title, value, userId } = props.group;
     return (
         <div className='card-group-item'>
             <div className='card-group-header'>
                 <div className='card-group-title-container'>
-                    <MdCancel style={{ color: "#9ca3af" }} />
+                    {userId ?
+                        <div className='user-container'>
+                            <div className='image-container'>
+                                <img src={`/assets/images/${userId}.jpeg`} className='user-image' alt='user-icon' />
+                            </div>
+                            <div className='user-status-outer'>
+                                <div className='user-status-inner'>
+
+                                </div>
+                            </div>
+                        </div>
+                        :
+                        <CardGroupHeadingIcon title={title} />
+                    }
                     <span className='card-group-title-text'>{title}</span>
                     <span className='card-group-title-number'>{value.length}</span>
                 </div>

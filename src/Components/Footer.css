@@ -1,0 +1,31 @@
+.footer-body {
+    background-color: white;
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 16px;
+    color: #57534e;
+    font-weight: 500;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.footer-icon-box {
+    border: 1px solid #9ca3af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+}

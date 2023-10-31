@@ -5,6 +5,7 @@ import CardContainer from './Components/CardContainer';
 import Navbar from './Components/Navbar';
 import { setPreference, setTickets, setUsers } from './features/ticketSlice';
 import './App.css';
+import Footer from './Components/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function App() {
     <div className="App">
       <Navbar />
       <CardContainer />
+      <Footer />
     </div>
   );
 }

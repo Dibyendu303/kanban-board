@@ -25,7 +25,6 @@ export const ticketSlice = createSlice({
             state.preference = action.payload;
         },
         groupTickets: (state, action) => {
-            // console.log("Dispatch called", action.payload);
             if (state.preference.groupBy === "status") {
                 const statusList = ["Backlog", "Todo", "In progress", "Done", "Cancelled"];
                 let selectedData = [];
@@ -61,6 +60,7 @@ export const ticketSlice = createSlice({
                     })
                     selectedData.push({
                         title: currUser.name,
+                        userId: currUser.id,
                         value: currTickets
                     })
                 })
