@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./PreferencesModal.css"
 import { useDispatch } from 'react-redux';
 import { groupTickets, setPreference } from '../features/ticketSlice';
 
 const PreferencesModal = ({ setIsModalOpen }) => {
+    const modalEl = useRef();
     const [option, setOption] = useState({
         groupBy: "status",
         orderBy: "priority"
@@ -29,8 +30,23 @@ const PreferencesModal = ({ setIsModalOpen }) => {
         }
     }, []);
 
+    useEffect(() => {
+        const handler = (event) => {
+            if (!modalEl.current) {
+                return;
+            }
+            if (!modalEl.current.contains(event.target)) {
+                setIsModalOpen(false);
+            }
+        };
+        document.addEventListener("click", handler, true);
+        return () => {
+            document.removeEventListener("click", handler);
+        };
+    }, []);
+
     return (
-        <div className='modal-body'>
+        <div className='modal-body' ref={modalEl}>
             <div className='modal-option-container'>
                 <span className='modal-option-text'>
                     Grouping
