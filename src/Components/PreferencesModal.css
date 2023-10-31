@@ -1,0 +1,35 @@
+.modal-body{
+    background-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    position: absolute;
+    top: 4rem;
+    left: 2rem;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.15);
+    padding: 1rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-option-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-option-text{
+    font-weight: 500;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.modal-select{
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 1px solid #d1d5db;
+    color: #1f2937;
+    cursor: pointer;
+}
