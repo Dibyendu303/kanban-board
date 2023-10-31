@@ -1,16 +1,17 @@
 import React from 'react'
 import { FaExclamation } from 'react-icons/fa';
-import { BsFillCircleFill } from 'react-icons/bs';
 import "./Card.css"
+import Tag from './Tag';
 
-const Card = () => {
+const Card = (props) => {
+    const { id, priority, status, tag, title, userId } = props.ticket;
     return (
         <div className='card-body'>
             <div className='card-title'>
-                <div className='card-title-text'>CAM-11</div>
+                <div className='card-title-text'>{id}</div>
                 <div className='user-container'>
                     <div className='image-container'>
-                        <img src="/assets/images/user1.jpg" className='user-image' />
+                        <img src="/assets/images/user1.jpg" className='user-image' alt='user-icon' />
                     </div>
                     <div className='user-status-outer'>
                         <div className='user-status-inner'>
@@ -19,21 +20,16 @@ const Card = () => {
                     </div>
                 </div>
             </div>
-            <div className='card-heading'>Conduct Security Vulnerbility Assessment</div>
+            <div className='card-heading'>{title}</div>
             <div className='card-icons'>
                 <div className='icon-outer-container'>
                     <div className='icon-inner-container'>
                         <FaExclamation />
                     </div>
                 </div>
-                <div className='card-icons__tag-container'>
-                    <div className='card-icons__tag-container__icon'>
-                        <BsFillCircleFill />
-                    </div>
-                    <div className='card-icons__tag-container__text'>
-                        Feature request
-                    </div>
-                </div>
+                {tag.map((item, index) => {
+                    return <Tag title={item} key={index} />
+                })}
             </div>
         </div>
     )

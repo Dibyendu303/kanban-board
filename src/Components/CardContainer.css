@@ -1,0 +1,45 @@
+.card-group-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0 2rem;
+    gap:1.5rem;
+}
+
+.card-group-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.card-group-title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:12px;
+}
+
+.card-group-title-text
+{
+    font-size: 16px;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.card-group-title-number{
+    color: #6b7280;
+}
+
+.card-group-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    color: #6b7280;
+}
+
+.card-group-list{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
