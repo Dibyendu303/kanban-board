@@ -6,7 +6,6 @@ import Tag from './Tag';
 
 const Card = (props) => {
     const { id, priority, status, tag, title, userId } = props.ticket;
-    console.log(userId);
     return (
         <div className='card-body'>
             <div className='card-title'>
