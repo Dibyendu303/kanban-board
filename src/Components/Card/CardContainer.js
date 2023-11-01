@@ -5,7 +5,6 @@ import CardGroup from './CardGroup';
 import "./CardContainer.css"
 
 const CardContainer = () => {
-
     const tickets = useSelector(selectAllTickets);
     const dispatch = useDispatch();
     const grouped = useSelector(selectGroupedTickets);

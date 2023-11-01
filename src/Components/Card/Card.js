@@ -6,12 +6,14 @@ import Tag from '../Utilities/Tag';
 import UserIcon from '../Utilities/UserIcon';
 
 const Card = (props) => {
-    const { id, priority, status, tag, title, userId } = props.ticket;
+    const { id, priority, status, tag, title } = props.ticket;
+    const { user } = props;
+
     return (
         <div className='card-body'>
             <div className='card-title'>
                 <div className='card-title-text'>{id}</div>
-                <UserIcon userId={userId} />
+                <UserIcon user={user} />
             </div>
             <div className='card-heading'>{title}</div>
             <div className='card-icons'>

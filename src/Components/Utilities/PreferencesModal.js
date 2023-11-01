@@ -16,7 +16,6 @@ const PreferencesModal = ({ setIsModalOpen, buttonRef }) => {
             ...option,
             [e.target.name]: e.target.value,
         };
-        console.log(newPreference);
         setOption(newPreference);
         dispatch(setPreference(newPreference));
         dispatch(groupTickets());
