@@ -1,0 +1,27 @@
+.loading-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.spinner-item {
+    margin: 12px;
+    width: 30px;
+}
+
+.main-text {
+    color: #1f2937;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px;
+}
+
+.sub-text {
+    color: #9ca3af;
+    font-size: 14px;
+    font-weight: 300;
+}

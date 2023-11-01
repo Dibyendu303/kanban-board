@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from "axios"
-import Navbar from './Components/Navbar';
-import { setPreference, setTickets, setUsers } from './features/ticketSlice';
+import { selectLoading, setLoading, setPreference, setTickets, setUsers } from './features/ticketSlice';
 import './App.css';
-import Footer from './Components/Footer';
-import CardContainer from './Components/Card/CardContainer';
+import LoadingScreen from './Screens/LoadingScreen';
+import HomeScreen from './Screens/HomeScreen';
 
 function App() {
   const dispatch = useDispatch();
+  const isLoading = useSelector(selectLoading);
 
   const fetchTickets = async () => {
     try {
@@ -17,6 +17,8 @@ function App() {
       dispatch(setUsers(response.data.users));
     } catch (e) {
       console.log("Unable to fetch tickets. Please try again later", e);
+    } finally {
+      dispatch(setLoading(false));
     }
   }
 
@@ -30,9 +32,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <CardContainer />
-      <Footer />
+      {isLoading ?
+        <LoadingScreen />
+        :
+        <HomeScreen />
+      }
     </div>
   );
 }

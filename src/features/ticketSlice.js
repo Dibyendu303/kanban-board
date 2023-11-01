@@ -7,7 +7,8 @@ const initialState = {
     preference: {
         groupBy: "status",
         orderBy: "priority"
-    }
+    },
+    loading: true
 }
 
 export const ticketSlice = createSlice({
@@ -23,6 +24,9 @@ export const ticketSlice = createSlice({
         setPreference: (state, action) => {
             localStorage.setItem("kanbanBoard", JSON.stringify(action.payload));
             state.preference = action.payload;
+        },
+        setLoading: (state, action) => {
+            state.loading = action.payload;
         },
         groupTickets: (state, action) => {
             if (state.preference.groupBy === "status") {
@@ -85,11 +89,12 @@ export const ticketSlice = createSlice({
     },
 })
 
-export const { setTickets, setUsers, groupTickets, setPreference } = ticketSlice.actions;
+export const { setTickets, setUsers, groupTickets, setPreference, setLoading } = ticketSlice.actions;
 
 export const selectAllTickets = (state) => state.ticket.allTickets;
 export const selectGroupedTickets = (state) => state.ticket.selectedTickets;
 export const selectUser = (state) => state.ticket.allUsers;
-export const getPreference = (state) => state.ticket.preference;
+export const selectPreference = (state) => state.ticket.preference;
+export const selectLoading = (state) => state.ticket.loading;
 
 export default ticketSlice.reducer;

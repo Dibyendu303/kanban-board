@@ -6,12 +6,12 @@ import Tag from '../Utilities/Tag';
 import UserIcon from '../Utilities/UserIcon';
 import "./Card.css"
 import { useSelector } from 'react-redux';
-import { getPreference } from '../../features/ticketSlice';
+import { selectPreference } from '../../features/ticketSlice';
 
 const Card = (props) => {
     const { id, priority, status, tag, title } = props.ticket;
     const { user } = props;
-    const preference = useSelector(getPreference);
+    const preference = useSelector(selectPreference);
 
     return (
         <div className='card-body'>

@@ -3,6 +3,7 @@
     grid-template-columns: repeat(1, 1fr);
     margin: 0 2rem 2rem;
     gap: 1.5rem;
+    min-height: calc(100vh - 167px);
 }
 
 .card-group-header {
@@ -51,20 +52,17 @@
 @media only screen and (min-width: 768px) {
     .card-group-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
     }
 }
 
 @media only screen and (min-width: 1024px) {
     .card-group-container {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
     }
 }
 
 @media only screen and (min-width: 1500px) {
     .card-group-container {
         grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
     }
 }
