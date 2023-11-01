@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from "axios"
-import CardContainer from './Components/CardContainer';
 import Navbar from './Components/Navbar';
 import { setPreference, setTickets, setUsers } from './features/ticketSlice';
 import './App.css';
 import Footer from './Components/Footer';
+import CardContainer from './Components/Card/CardContainer';
 
 function App() {
   const dispatch = useDispatch();

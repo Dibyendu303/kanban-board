@@ -2,7 +2,8 @@ import React from 'react'
 import { FaExclamation } from 'react-icons/fa';
 import { TbAntennaBars1, TbAntennaBars2, TbAntennaBars3, TbAntennaBars5 } from 'react-icons/tb';
 import "./Card.css"
-import Tag from './Tag';
+import Tag from '../Utilities/Tag';
+import UserIcon from '../Utilities/UserIcon';
 
 const Card = (props) => {
     const { id, priority, status, tag, title, userId } = props.ticket;
@@ -10,16 +11,7 @@ const Card = (props) => {
         <div className='card-body'>
             <div className='card-title'>
                 <div className='card-title-text'>{id}</div>
-                <div className='user-container'>
-                    <div className='image-container'>
-                        <img src={`/assets/images/${userId}.jpeg`} className='user-image' alt='user-icon' />
-                    </div>
-                    <div className='user-status-outer'>
-                        <div className='user-status-inner'>
-
-                        </div>
-                    </div>
-                </div>
+                <UserIcon userId={userId} />
             </div>
             <div className='card-heading'>{title}</div>
             <div className='card-icons'>

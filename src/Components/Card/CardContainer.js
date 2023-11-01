@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { groupTickets, selectAllTickets, selectGroupedTickets } from '../features/ticketSlice';
+import { groupTickets, selectAllTickets, selectGroupedTickets } from '../../features/ticketSlice';
 import CardGroup from './CardGroup';
 import "./CardContainer.css"
 

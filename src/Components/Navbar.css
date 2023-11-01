@@ -28,4 +28,5 @@
     font-size: 16px;
     color: #1f2937;
     font-weight: 500;
+    user-select: none;
 }

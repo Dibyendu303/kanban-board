@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "./PreferencesModal.css"
 import { useDispatch } from 'react-redux';
-import { groupTickets, setPreference } from '../features/ticketSlice';
+import { groupTickets, setPreference } from '../../features/ticketSlice';
 
-const PreferencesModal = ({ setIsModalOpen }) => {
+const PreferencesModal = ({ setIsModalOpen, buttonRef }) => {
     const modalEl = useRef();
     const [option, setOption] = useState({
         groupBy: "status",
@@ -32,7 +32,7 @@ const PreferencesModal = ({ setIsModalOpen }) => {
 
     useEffect(() => {
         const handler = (event) => {
-            if (!modalEl.current) {
+            if (!modalEl.current || buttonRef?.current?.contains(event.target)) {
                 return;
             }
             if (!modalEl.current.contains(event.target)) {
