@@ -90,5 +90,6 @@ export const { setTickets, setUsers, groupTickets, setPreference } = ticketSlice
 export const selectAllTickets = (state) => state.ticket.allTickets;
 export const selectGroupedTickets = (state) => state.ticket.selectedTickets;
 export const selectUser = (state) => state.ticket.allUsers;
+export const getPreference = (state) => state.ticket.preference;
 
 export default ticketSlice.reducer;

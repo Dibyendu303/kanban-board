@@ -2,7 +2,7 @@ import React from 'react'
 import { FaPlus } from 'react-icons/fa6';
 import { BsThreeDots } from 'react-icons/bs';
 import Card from './Card';
-import CardGroupHeadingIcon from './CardGroupHeadingIcon';
+import TitleIcon from '../Utilities/TitleIcon';
 import UserIcon from '../Utilities/UserIcon';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/ticketSlice';
@@ -18,7 +18,7 @@ const CardGroup = (props) => {
                     {userId ?
                         <UserIcon user={users.find(({ id }) => id === userId)} />
                         :
-                        <CardGroupHeadingIcon title={title} />
+                        <TitleIcon title={title} />
                     }
                     <span className='card-group-title-text'>{title}</span>
                     <span className='card-group-title-number'>{value.length}</span>
