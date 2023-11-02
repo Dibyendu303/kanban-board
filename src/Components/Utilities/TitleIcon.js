@@ -39,7 +39,7 @@ const CardGroupHeadingIcon = ({ title }) => {
                                                     <TbAntennaBars2 style={{ color: "#6b7280" }} />
                                                     :
                                                     title === "No priority" ?
-                                                        <TbAntennaBars2 style={{ color: "#6b7280" }} />
+                                                        <TbAntennaBars1 style={{ color: "#6b7280" }} />
                                                         :
                                                         <></>
             }
